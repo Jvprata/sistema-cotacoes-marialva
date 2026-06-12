@@ -31,9 +31,9 @@ st.markdown(
 }
 #MainMenu, footer { visibility: hidden !important; }
 .block-container {
-    padding-top: 1.1rem !important;
-    padding-bottom: 1.2rem !important;
-    max-width: 1180px;
+    padding-top: .35rem !important;
+    padding-bottom: .5rem !important;
+    max-width: 1080px;
 }
 html, body, [data-testid="stAppViewContainer"] {
     background: radial-gradient(circle at top left, #111827 0, #050816 42%, #030712 100%) !important;
@@ -50,33 +50,40 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 .main-card {
     border: 1px solid var(--line);
-    background: linear-gradient(135deg, rgba(14, 116, 144, .32), rgba(88, 28, 135, .28));
-    border-radius: 28px;
-    padding: 26px 28px;
-    box-shadow: 0 18px 60px rgba(0,0,0,.28);
+    background: linear-gradient(135deg, rgba(14, 116, 144, .30), rgba(88, 28, 135, .24));
+    border-radius: 22px;
+    padding: 18px 22px;
+    box-shadow: 0 10px 34px rgba(0,0,0,.22);
 }
 .card {
     border: 1px solid var(--line);
     background: var(--bg-card);
-    border-radius: 22px;
-    padding: 18px 18px;
-    min-height: 92px;
+    border-radius: 18px;
+    padding: 12px 14px;
+    min-height: 72px;
 }
 .card h3, .main-card h1 { margin: 0 0 8px 0; }
 .card small, .muted { color: var(--muted); }
-.metric-number { font-size: 28px; font-weight: 900; color: white; margin-top: 4px; }
+.metric-number {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 .pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     border: 1px solid var(--line);
     background: rgba(15, 23, 42, .62);
     border-radius: 999px;
-    padding: 8px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
     font-weight: 800;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin-right: 6px;
+    margin-bottom: 4px;
 }
 .notice {
     border: 1px solid rgba(56,189,248,.36);
@@ -86,12 +93,12 @@ html, body, [data-testid="stAppViewContainer"] {
     font-weight: 800;
 }
 .stButton > button {
-    border-radius: 16px !important;
+    border-radius: 14px !important;
     border: 1px solid rgba(148, 163, 184, .26) !important;
     background: rgba(15, 23, 42, .88) !important;
     color: white !important;
     font-weight: 800 !important;
-    min-height: 43px;
+    min-height: 38px;
 }
 .stButton > button:hover {
     border-color: rgba(56, 189, 248, .72) !important;
@@ -100,6 +107,40 @@ html, body, [data-testid="stAppViewContainer"] {
 input, textarea, [data-baseweb="select"] { border-radius: 14px !important; }
 h1, h2, h3, h4, p, span, label { color: #f8fafc; }
 hr { border-color: rgba(148,163,184,.18); }
+
+.status-line {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.status-chip {
+    border: 1px solid rgba(148, 163, 184, .24);
+    background: rgba(15, 23, 42, .58);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+.main-card {
+    min-height: 0 !important;
+}
+.main-card h1 {
+    margin-bottom: 8px !important;
+}
+
+
+/* AJUSTE ESPACAMENTO HOME V10 */
+.main-card {
+    margin-bottom: 14px !important;
+}
+
+div[data-testid="stMarkdownContainer"]:has(.main-card) {
+    margin-bottom: 14px !important;
+}
+/* FIM AJUSTE ESPACAMENTO HOME V10 */
+
 </style>
 """,
     unsafe_allow_html=True,
@@ -351,8 +392,6 @@ for idx, page in enumerate(PAGES):
         st.session_state.tela = page
         st.rerun()
 
-st.write("")
-
 # -------------------------
 # Páginas
 # -------------------------
@@ -363,6 +402,20 @@ def tela_inicio():
     itens_atual = [i for i in itens if i.get("cotacao_id") == atual_id]
     resp_atual = [r for r in respostas if r.get("cotacao_id") == atual_id]
     fornecedores_resp = len(set(r.get("fornecedor_id") for r in resp_atual if r.get("fornecedor_id")))
+    total_fornecedores = len(fornecedores)
+    pendentes_atual = max(total_fornecedores - fornecedores_resp, 0)
+    prazo_atual = atual.get("prazo", "—") if atual else "—"
+
+    if not atual:
+        status_fluxo = "Sem cotação"
+    elif len(itens_atual) == 0:
+        status_fluxo = "Adicionar produtos"
+    elif fornecedores_resp == 0:
+        status_fluxo = "Enviar aos fornecedores"
+    elif pendentes_atual > 0:
+        status_fluxo = "Aguardando respostas"
+    else:
+        status_fluxo = "Pronto para comparar"
 
     if not atual:
         proxima = "Criar a primeira cotação."
@@ -376,43 +429,30 @@ def tela_inicio():
     st.markdown(
         f"""
 <div class="main-card">
-    <div class="muted" style="font-weight:900;letter-spacing:.08em;font-size:12px;">SUPERMERCADO MARIALVA</div>
-    <h1>Cotações simples, rápidas e online.</h1>
-    <p class="muted">Sistema conectado ao Supabase. Agora os dados ficam no banco online e podem ir para a nuvem.</p>
-    <span class="pill">Cotação atual: {atual_id}</span>
-    <span class="pill">Itens: {len(itens_atual)}</span>
-    <span class="pill">Fornecedores: {len(fornecedores)}</span>
+    <div class="muted" style="font-weight:900;letter-spacing:.08em;font-size:11px;">SUPERMERCADO MARIALVA</div>
+    <h1>Painel de cotações</h1>
+    <div class="status-line">
+        <span class="status-chip">Cotação: {atual_id}</span>
+        <span class="status-chip">Prazo: {prazo_atual}</span>
+        <span class="status-chip">Status: {status_fluxo}</span>
+    </div>
 </div>
 """,
         unsafe_allow_html=True,
     )
 
-    st.write("")
     c1, c2, c3, c4, c5 = st.columns(5)
     cards = [
         ("Produtos", len(produtos), "Base online"),
-        ("Fornecedores", len(fornecedores), "Contatos"),
-        ("Cotações", len(cotacoes), "Histórico"),
-        ("Respostas", len(respostas), "Preços"),
-        ("Responderam", fornecedores_resp, "Na cotação atual"),
+        ("Fornecedores", total_fornecedores, "Contatos"),
+        ("Itens", len(itens_atual), "Cotação atual"),
+        ("Responderam", fornecedores_resp, "Cotação atual"),
+        ("Pendentes", pendentes_atual, "Fornecedores"),
     ]
     for col, (titulo, numero, subtitulo) in zip([c1, c2, c3, c4, c5], cards):
         col.markdown(f'<div class="card"><small>{titulo}</small><div class="metric-number">{numero}</div><small>{subtitulo}</small></div>', unsafe_allow_html=True)
 
-    st.write("")
-    st.markdown(f'<div class="notice">Próxima ação recomendada: {proxima}</div>', unsafe_allow_html=True)
-    st.write("")
-    a1, a2, a3, a4 = st.columns(4)
-    if a1.button("Criar / adicionar", key="home_criar", width="stretch"):
-        st.session_state.tela = "Criar"; st.rerun()
-    if a2.button("Enviar links", key="home_enviar", width="stretch"):
-        st.session_state.tela = "Enviar"; st.rerun()
-    if a3.button("Comparar", key="home_comparar", width="stretch"):
-        st.session_state.tela = "Comparar"; st.rerun()
-    if a4.button("Pedido final", key="home_pedido", width="stretch"):
-        st.session_state.tela = "Pedido"; st.rerun()
-
-
+    # Tela inicial compacta: ações principais ficam no menu superior.
 def tela_criar():
     st.header("Criar cotação")
     produtos, fornecedores, cotacoes, itens, respostas = carregar_base()
