@@ -1,0 +1,14 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.env
+.streamlit/secrets.toml
+backups/
+app_backup*.py
+dados/
+*.csv
+*.xlsx
+*.pdf
+*.png
+*.jpg
+*.jpeg
