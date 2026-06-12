@@ -12,3 +12,4 @@ dados/
 *.png
 *.jpg
 *.jpeg
+.venv/
