@@ -141,6 +141,729 @@ div[data-testid="stMarkdownContainer"]:has(.main-card) {
 }
 /* FIM AJUSTE ESPACAMENTO HOME V10 */
 
+
+/* VISUAL PROFISSIONAL V11 */
+
+/* área geral mais compacta */
+.block-container {
+    padding-top: .35rem !important;
+    padding-bottom: .35rem !important;
+    max-width: 1040px !important;
+}
+
+/* menu superior mais sóbrio */
+.stButton > button {
+    border-radius: 13px !important;
+    border: 1px solid rgba(148, 163, 184, .24) !important;
+    background: rgba(15, 23, 42, .88) !important;
+    color: white !important;
+    font-weight: 800 !important;
+    min-height: 36px !important;
+    font-size: 13px !important;
+}
+
+/* card principal mais profissional, menos banner */
+.main-card {
+    border: 1px solid rgba(148, 163, 184, .20) !important;
+    background: linear-gradient(135deg, rgba(15, 23, 42, .96), rgba(30, 41, 59, .92)) !important;
+    border-radius: 20px !important;
+    padding: 16px 20px !important;
+    min-height: 0 !important;
+    margin-bottom: 24px !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18) !important;
+}
+
+/* título menor e mais institucional */
+.main-card h1 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+    margin: 8px 0 12px 0 !important;
+    letter-spacing: -.02em !important;
+}
+
+/* texto pequeno do topo */
+.main-card .muted {
+    font-size: 10.5px !important;
+    letter-spacing: .10em !important;
+    color: rgba(203, 213, 225, .85) !important;
+}
+
+/* chips de status mais discretos */
+.status-line {
+    display: flex !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    margin-top: 8px !important;
+}
+
+.status-chip {
+    border: 1px solid rgba(148, 163, 184, .24) !important;
+    background: rgba(2, 6, 23, .38) !important;
+    border-radius: 999px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    color: #f8fafc !important;
+}
+
+/* cards inferiores mais compactos */
+.card {
+    border: 1px solid rgba(148, 163, 184, .22) !important;
+    background: rgba(15, 23, 42, .72) !important;
+    border-radius: 16px !important;
+    padding: 11px 13px !important;
+    min-height: 70px !important;
+    box-shadow: none !important;
+}
+
+.metric-number {
+    font-size: 23px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    color: white !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.card small {
+    font-size: 12px !important;
+    color: rgba(191, 219, 254, .82) !important;
+}
+
+/* diminui espaços verticais do Streamlit */
+[data-testid="stVerticalBlock"] {
+    gap: .45rem !important;
+}
+
+/* FIM VISUAL PROFISSIONAL V11 */
+
+
+/* FRONTEND INTELIGENTE V12 */
+
+/* página mais centralizada e sem desperdício */
+.block-container {
+    padding-top: .35rem !important;
+    padding-bottom: .35rem !important;
+    max-width: 1040px !important;
+}
+
+/* navegação limpa */
+.stButton > button {
+    border-radius: 13px !important;
+    border: 1px solid rgba(148, 163, 184, .24) !important;
+    background: rgba(15, 23, 42, .88) !important;
+    color: white !important;
+    font-weight: 800 !important;
+    min-height: 36px !important;
+    font-size: 13px !important;
+}
+
+/* painel principal: mais smartwatch, menos banner */
+.main-card {
+    border: 1px solid rgba(148, 163, 184, .20) !important;
+    background:
+        radial-gradient(circle at 88% 22%, rgba(14, 165, 233, .14), transparent 30%),
+        radial-gradient(circle at 78% 90%, rgba(34, 197, 94, .10), transparent 26%),
+        linear-gradient(135deg, rgba(15, 23, 42, .98), rgba(30, 41, 59, .92)) !important;
+    border-radius: 22px !important;
+    padding: 14px 18px !important;
+    min-height: 132px !important;
+    margin-bottom: 24px !important;
+    box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
+}
+
+.smart-hero {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 18px;
+    align-items: center;
+}
+
+.brand-mini {
+    font-size: 10.5px;
+    font-weight: 900;
+    letter-spacing: .11em;
+    color: rgba(203, 213, 225, .82);
+    margin-bottom: 6px;
+}
+
+.main-card h1 {
+    font-size: 29px !important;
+    line-height: 1.04 !important;
+    margin: 0 0 12px 0 !important;
+    letter-spacing: -.02em !important;
+}
+
+.status-line {
+    display: flex !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    margin-top: 8px !important;
+}
+
+.status-chip {
+    border: 1px solid rgba(148, 163, 184, .24) !important;
+    background: rgba(2, 6, 23, .38) !important;
+    border-radius: 999px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    color: #f8fafc !important;
+}
+
+.status-chip.primary {
+    border-color: rgba(56, 189, 248, .36) !important;
+    background: rgba(14, 116, 144, .18) !important;
+}
+
+/* área dinâmica do painel, estilo smartwatch */
+.watch-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.watch-face {
+    width: 104px;
+    height: 104px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background:
+        conic-gradient(
+            from 180deg,
+            rgba(34, 197, 94, .95) calc(var(--progress) * 1%),
+            rgba(30, 41, 59, .88) 0
+        );
+    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, .20), 0 10px 24px rgba(0,0,0,.20);
+}
+
+.watch-face::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, .96);
+    border: 1px solid rgba(148, 163, 184, .18);
+}
+
+.watch-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.watch-number {
+    font-size: 22px;
+    font-weight: 950;
+    line-height: 1;
+    color: white;
+}
+
+.watch-label {
+    font-size: 10px;
+    font-weight: 800;
+    color: rgba(203, 213, 225, .72);
+    margin-top: 3px;
+}
+
+.watch-info {
+    min-width: 108px;
+}
+
+.watch-info-title {
+    font-size: 11px;
+    font-weight: 900;
+    color: rgba(191, 219, 254, .90);
+    margin-bottom: 4px;
+}
+
+.watch-info-main {
+    font-size: 14px;
+    font-weight: 950;
+    color: white;
+    line-height: 1.15;
+}
+
+.watch-info-sub {
+    font-size: 11px;
+    color: rgba(203, 213, 225, .68);
+    margin-top: 4px;
+}
+
+/* cards inferiores: ícone pequeno, número forte */
+.card {
+    border: 1px solid rgba(148, 163, 184, .22) !important;
+    background: rgba(15, 23, 42, .72) !important;
+    border-radius: 16px !important;
+    padding: 11px 13px !important;
+    min-height: 70px !important;
+    box-shadow: none !important;
+}
+
+.metric-number {
+    font-size: 23px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    color: white !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.card small {
+    font-size: 12px !important;
+    color: rgba(191, 219, 254, .82) !important;
+}
+
+[data-testid="stVerticalBlock"] {
+    gap: .45rem !important;
+}
+
+/* página do fornecedor mais didática */
+.vendor-help {
+    border: 1px solid rgba(56, 189, 248, .20);
+    background: rgba(14, 116, 144, .10);
+    border-radius: 16px;
+    padding: 10px 12px;
+    margin: 8px 0 14px 0;
+    font-size: 13px;
+    color: rgba(226, 232, 240, .92);
+}
+
+.vendor-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 12px;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .smart-hero {
+        grid-template-columns: 1fr;
+    }
+    .watch-area {
+        justify-content: flex-start;
+    }
+}
+
+/* FIM FRONTEND INTELIGENTE V12 */
+
+
+/* HOME FLUXO VISUAL V13 */
+
+/* dá mais presença aos cards, sem virar poluição */
+.card {
+    min-height: 96px !important;
+    padding: 14px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.card small:first-child {
+    font-size: 12.5px !important;
+    font-weight: 800 !important;
+    color: rgba(191, 219, 254, .88) !important;
+}
+
+.card small:first-child::first-letter {
+    font-size: 24px !important;
+    line-height: 1 !important;
+}
+
+.metric-number {
+    font-size: 25px !important;
+}
+
+/* faixa inferior: ocupa o espaço vazio com sentido operacional */
+.home-flow {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.flow-card {
+    border: 1px solid rgba(148, 163, 184, .20);
+    background: rgba(15, 23, 42, .58);
+    border-radius: 18px;
+    padding: 14px 15px;
+    min-height: 86px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.flow-card.active {
+    border-color: rgba(56, 189, 248, .32);
+    background: rgba(14, 116, 144, .12);
+}
+
+.flow-card.done {
+    border-color: rgba(34, 197, 94, .30);
+    background: rgba(22, 101, 52, .10);
+}
+
+.flow-card.wait {
+    border-color: rgba(251, 191, 36, .24);
+    background: rgba(120, 53, 15, .08);
+}
+
+.flow-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    background: rgba(2, 6, 23, .42);
+    border: 1px solid rgba(148, 163, 184, .18);
+}
+
+.flow-title {
+    font-size: 13px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.flow-sub {
+    font-size: 11.5px;
+    color: rgba(203, 213, 225, .72);
+    line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+    .home-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* FIM HOME FLUXO VISUAL V13 */
+
+
+
+
+
+
+
+
+/* HOME VISUAL 150 REAL V16 */
+
+/* A largura fica mais parecida com o print que você gostou */
+.block-container {
+    max-width: 895px !important;
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+}
+
+/* Menu grande, mas controlado */
+.stButton > button {
+    min-height: 44px !important;
+    border-radius: 14px !important;
+    font-size: 15px !important;
+    font-weight: 850 !important;
+}
+
+/* Card principal com proporção correta: presente, mas sem ficar gigante */
+.main-card {
+    min-height: 194px !important;
+    padding: 20px 22px !important;
+    border-radius: 22px !important;
+    margin-bottom: 54px !important;
+    background:
+        radial-gradient(circle at 84% 35%, rgba(14, 165, 233, .20), transparent 31%),
+        radial-gradient(circle at 75% 85%, rgba(34, 197, 94, .10), transparent 28%),
+        linear-gradient(135deg, rgba(15, 23, 42, .98), rgba(30, 41, 59, .94)) !important;
+}
+
+/* Layout interno do painel */
+.smart-hero {
+    display: grid !important;
+    grid-template-columns: 1fr 285px !important;
+    gap: 22px !important;
+    min-height: 150px !important;
+    align-items: center !important;
+}
+
+/* Título e marca */
+.brand-mini {
+    font-size: 11px !important;
+    letter-spacing: .12em !important;
+    margin-bottom: 38px !important;
+}
+
+.main-card h1 {
+    font-size: 30px !important;
+    line-height: 1.04 !important;
+    margin: 0 0 28px 0 !important;
+    letter-spacing: -.02em !important;
+}
+
+/* Chips */
+.status-line {
+    gap: 10px !important;
+}
+
+.status-chip {
+    padding: 8px 12px !important;
+    font-size: 12.8px !important;
+    border-radius: 999px !important;
+}
+
+/* Relógio/progresso no lado direito */
+.watch-area {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.watch-face {
+    width: 122px !important;
+    height: 122px !important;
+}
+
+.watch-face::before {
+    width: 88px !important;
+    height: 88px !important;
+}
+
+.watch-number {
+    font-size: 28px !important;
+}
+
+.watch-label {
+    font-size: 12px !important;
+}
+
+.watch-info-title {
+    font-size: 12px !important;
+}
+
+.watch-info-main {
+    font-size: 17px !important;
+    line-height: 1.08 !important;
+}
+
+.watch-info-sub {
+    font-size: 12px !important;
+}
+
+/* Cards inferiores grandes na medida certa */
+.card {
+    min-height: 124px !important;
+    padding: 18px 18px !important;
+    border-radius: 17px !important;
+    justify-content: center !important;
+}
+
+/* Ícones fortes, mas sem exagero */
+.card small:first-child {
+    font-size: 14px !important;
+    font-weight: 850 !important;
+}
+
+.card small:first-child::first-letter {
+    font-size: 30px !important;
+    line-height: 1 !important;
+}
+
+/* Números principais */
+.metric-number {
+    font-size: 31px !important;
+    line-height: 1 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.card small {
+    font-size: 14px !important;
+}
+
+/* Esconde fluxo extra para manter a home igual ao modelo que você gostou */
+.home-flow {
+    display: none !important;
+}
+
+/* Controla espaços automáticos */
+[data-testid="stVerticalBlock"] {
+    gap: .50rem !important;
+}
+
+/* Em telas menores, mantém usável */
+@media (max-width: 820px) {
+    .block-container {
+        max-width: 94vw !important;
+    }
+
+    .smart-hero {
+        grid-template-columns: 1fr !important;
+    }
+
+    .watch-area {
+        display: none !important;
+    }
+
+    .main-card {
+        min-height: 180px !important;
+        margin-bottom: 28px !important;
+    }
+}
+
+/* FIM HOME VISUAL 150 REAL V16 */
+
+
+/* ALINHAMENTO ICONES HOME V17 */
+
+/* distância exata entre painel principal e cards */
+.main-card {
+    margin-bottom: 46px !important;
+}
+
+/* card com grade vertical: topo / número / descrição */
+.metric-card {
+    min-height: 128px !important;
+    height: 128px !important;
+    padding: 16px 17px !important;
+    display: grid !important;
+    grid-template-rows: 40px 36px 22px !important;
+    align-items: center !important;
+}
+
+/* topo do card: ícone + nome sempre alinhados */
+.metric-head {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ícone com caixa invisível padronizada */
+.metric-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    line-height: 1;
+}
+
+/* nome do card */
+.metric-title {
+    font-size: 13.5px;
+    font-weight: 850;
+    line-height: 1.05;
+    color: rgba(191, 219, 254, .92);
+}
+
+/* número sempre começa na mesma altura */
+.metric-value {
+    font-size: 31px;
+    line-height: 1;
+    font-weight: 950;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* descrição sempre na mesma linha inferior */
+.metric-desc {
+    font-size: 13px;
+    line-height: 1.05;
+    color: rgba(191, 219, 254, .80);
+}
+
+/* neutraliza o aumento antigo do primeiro caractere */
+.card small:first-child::first-letter {
+    font-size: inherit !important;
+}
+
+/* deixa o espaçamento entre os cards mais simétrico */
+[data-testid="column"] {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+
+/* FIM ALINHAMENTO ICONES HOME V17 */
+
+
+/* CARDS SIMETRIA FINAL V18 */
+
+/* todos os cards inferiores ficam com a mesma leitura visual */
+.metric-card {
+    height: 132px !important;
+    min-height: 132px !important;
+    padding: 14px 14px !important;
+    display: grid !important;
+    grid-template-rows: 34px 22px 38px 20px !important;
+    align-items: center !important;
+    justify-items: center !important;
+    text-align: center !important;
+}
+
+/* separa o ícone do nome para não ficar torto */
+.metric-head {
+    display: contents !important;
+}
+
+.metric-icon {
+    width: 34px !important;
+    height: 34px !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    margin: 0 auto !important;
+}
+
+.metric-title {
+    font-size: 13.5px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    color: rgba(191, 219, 254, .92) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.metric-value {
+    font-size: 31px !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    color: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.metric-desc {
+    font-size: 13px !important;
+    line-height: 1 !important;
+    color: rgba(191, 219, 254, .78) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* espaçamento horizontal mais regular entre os cards */
+[data-testid="column"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+/* evita que regras antigas aumentem só a primeira letra */
+.card small:first-child::first-letter {
+    font-size: inherit !important;
+}
+
+/* FIM CARDS SIMETRIA FINAL V18 */
+
 </style>
 """,
     unsafe_allow_html=True,
@@ -323,7 +1046,7 @@ def tela_vendedor():
     fornecedor = fornecedores_map.get(fornecedor_id)
     itens_cot = [i for i in itens if i.get("cotacao_id") == cotacao_id]
 
-    st.markdown('<div class="main-card"><h1>🛒 Cotação Marialva</h1><p class="muted">Preencha os preços abaixo e envie sua resposta.</p></div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-card"><h1>🛒 Cotação Marialva</h1><p class="muted">Informe os preços disponíveis. É rápido e não precisa instalar nada.</p></div>', unsafe_allow_html=True)
 
     if not cotacao_id or not fornecedor_id or not fornecedor:
         st.error("Link de cotação inválido. Peça um novo link ao responsável de compras.")
@@ -352,7 +1075,7 @@ def tela_vendedor():
             c1, c2 = st.columns([1, 1])
             preco = c1.text_input("Preço", value=str(existente.get("preco", "") or ""), key=f"vend_preco_{item.get('item_id')}")
             tem = c2.selectbox("Tem produto?", ["Sim", "Não"], index=0 if str(existente.get("tem_produto", "Sim")).lower() != "não" else 1, key=f"vend_tem_{item.get('item_id')}")
-            obs = st.text_input("Observação", value=existente.get("observacao", "") or "", key=f"vend_obs_{item.get('item_id')}")
+            obs = st.text_input("Observação (opcional)", value=existente.get("observacao", "") or "", key=f"vend_obs_{item.get('item_id')}")
             dados_envio.append((item, preco, tem, obs, existente))
             st.divider()
 
@@ -404,18 +1127,20 @@ def tela_inicio():
     fornecedores_resp = len(set(r.get("fornecedor_id") for r in resp_atual if r.get("fornecedor_id")))
     total_fornecedores = len(fornecedores)
     pendentes_atual = max(total_fornecedores - fornecedores_resp, 0)
+    progresso_resp = int((fornecedores_resp / total_fornecedores) * 100) if total_fornecedores else 0
     prazo_atual = atual.get("prazo", "—") if atual else "—"
+    prazo_display = str(prazo_atual).replace(" até ", " ")
 
     if not atual:
         status_fluxo = "Sem cotação"
     elif len(itens_atual) == 0:
-        status_fluxo = "Adicionar produtos"
+        status_fluxo = "Adicionar itens"
     elif fornecedores_resp == 0:
-        status_fluxo = "Enviar aos fornecedores"
+        status_fluxo = "Enviar cotação"
     elif pendentes_atual > 0:
-        status_fluxo = "Aguardando respostas"
+        status_fluxo = "Aguardando"
     else:
-        status_fluxo = "Pronto para comparar"
+        status_fluxo = "Comparar"
 
     if not atual:
         proxima = "Criar a primeira cotação."
@@ -429,12 +1154,29 @@ def tela_inicio():
     st.markdown(
         f"""
 <div class="main-card">
-    <div class="muted" style="font-weight:900;letter-spacing:.08em;font-size:11px;">SUPERMERCADO MARIALVA</div>
-    <h1>Painel de cotações</h1>
-    <div class="status-line">
-        <span class="status-chip">Cotação: {atual_id}</span>
-        <span class="status-chip">Prazo: {prazo_atual}</span>
-        <span class="status-chip">Status: {status_fluxo}</span>
+    <div class="smart-hero">
+        <div>
+            <div class="brand-mini">SUPERMERCADO MARIALVA</div>
+            <h1>Painel Marialva</h1>
+            <div class="status-line">
+                <span class="status-chip primary">Cotação: {atual_id}</span>
+                <span class="status-chip">Prazo: {prazo_display}</span>
+                <span class="status-chip">Ação: {status_fluxo}</span>
+            </div>
+        </div>
+        <div class="watch-area">
+            <div class="watch-face" style="--progress:{progresso_resp};">
+                <div class="watch-content">
+                    <div class="watch-number">{fornecedores_resp}/{total_fornecedores}</div>
+                    <div class="watch-label">respostas</div>
+                </div>
+            </div>
+            <div class="watch-info">
+                <div class="watch-info-title">Agora</div>
+                <div class="watch-info-main">{status_fluxo}</div>
+                <div class="watch-info-sub">{pendentes_atual} pendente(s)</div>
+            </div>
+        </div>
     </div>
 </div>
 """,
@@ -443,11 +1185,11 @@ def tela_inicio():
 
     c1, c2, c3, c4, c5 = st.columns(5)
     cards = [
-        ("Produtos", len(produtos), "Base online"),
-        ("Fornecedores", total_fornecedores, "Contatos"),
-        ("Itens", len(itens_atual), "Cotação atual"),
-        ("Responderam", fornecedores_resp, "Cotação atual"),
-        ("Pendentes", pendentes_atual, "Fornecedores"),
+        ("📦 Produtos", len(produtos), "Base online"),
+        ("👥 Fornecedores", total_fornecedores, "Contatos"),
+        ("🧾 Itens", len(itens_atual), "Cotação atual"),
+        ("✅ Responderam", fornecedores_resp, "Cotação atual"),
+        ("⏳ Pendentes", pendentes_atual, "Fornecedores"),
     ]
     for col, (titulo, numero, subtitulo) in zip([c1, c2, c3, c4, c5], cards):
         col.markdown(f'<div class="card"><small>{titulo}</small><div class="metric-number">{numero}</div><small>{subtitulo}</small></div>', unsafe_allow_html=True)
@@ -464,7 +1206,7 @@ def tela_criar():
             data = c1.date_input("Data", value=date.today())
             prazo = c2.text_input("Prazo", value="Hoje até 16:30")
             responsavel = c3.text_input("Responsável", value="Compras")
-            obs = st.text_input("Observação", value="Cotação de compras")
+            obs = st.text_input("Observação (opcional)", value="Cotação de compras")
             criar = st.form_submit_button("Criar cotação", width="stretch")
         if criar:
             cotacao_id = next_id("cotacoes", "cotacao_id", "COT")
@@ -590,7 +1332,7 @@ def tela_respostas():
             c1, c2 = st.columns(2)
             preco = c1.text_input("Preço", placeholder="Ex.: 4,99")
             tem = c2.selectbox("Tem produto?", ["Sim", "Não"])
-            obs = st.text_input("Observação")
+            obs = st.text_input("Observação (opcional)")
             salvar = st.form_submit_button("Salvar resposta", width="stretch")
         if salvar:
             resposta_id = next_id("respostas", "resposta_id", "RESP")
@@ -700,7 +1442,7 @@ def tela_cadastros():
             categoria = c4.text_input("Categoria")
             unidade = c5.text_input("Unidade")
             ativo = c6.selectbox("Ativo", ["Sim", "Não"])
-            obs = st.text_input("Observação")
+            obs = st.text_input("Observação (opcional)")
             salvar = st.form_submit_button("Salvar produto", width="stretch")
         if salvar and produto:
             produto_id = next_id("produtos", "produto_id", "PROD")
@@ -725,7 +1467,7 @@ def tela_cadastros():
             whatsapp = c3.text_input("WhatsApp")
             categoria = c4.text_input("Categoria forte")
             ativo = c5.selectbox("Ativo", ["Sim", "Não"], key="ativo_forn")
-            obs = st.text_input("Observação", key="obs_forn")
+            obs = st.text_input("Observação (opcional)", key="obs_forn")
             salvar = st.form_submit_button("Salvar fornecedor", width="stretch")
         if salvar and vendedor:
             fornecedor_id = next_id("fornecedores", "fornecedor_id", "FOR")
